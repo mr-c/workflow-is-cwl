@@ -12,12 +12,13 @@ doc: |
 
       Version 1.1.2 can be downloaded from http://eddylab.org/infernal/infernal-1.1.2.tar.gz
 hints:
-  - class: SoftwareRequirement
+  SoftwareRequirement:
     packages:
       infernal:
         specs: [ "https://identifiers.org/rrid/RRID:SCR_011809" ]
         version: [ "1.1.2" ]
-  #- $import: infernal-docker.yml
+  DockerRequirement:
+    dockerPull: biocontainers/infernal:v1.1.2-1-deb_cv1
 
 inputs:
   covariance_model_database:
