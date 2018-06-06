@@ -9,7 +9,6 @@ inputs:
   query_sequences: File
   covariance_models: File[]
   clan_info: File
-  cores: int
 
 outputs:
   deoverlapped_matches:
@@ -27,7 +26,6 @@ steps:
       search_space_size: { default: 1000 }
 #      TODO: For some model files, e.g. tRNA5, the GA bit threshold is unavailable
 #      cut_ga: { default: true }
-      cpu: cores
     out: [ matches, programOutput ]
     scatter: covariance_model_database
 

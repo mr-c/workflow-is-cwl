@@ -79,7 +79,7 @@ inputs:
   cpu:
     label: Number of parallel CPU workers to use for multithreads
     type: int?
-#    default: $(runtime.cores)
+    default: $(runtime.cores)
     inputBinding:
       prefix: --cpu
 
