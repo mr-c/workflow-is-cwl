@@ -12,7 +12,6 @@ inputs:
     type: File
 #   TODO: Resolve: Missing required 'format' for File at runtime
 #    format: edam:format_1929  # FASTA
-  singleBestOnly: boolean?
 
 outputs:
   peptide_sequences:
@@ -42,7 +41,6 @@ steps:
     in:
       transcriptsFile: transcriptsFile
       longOpenReadingFrames: extract_long_orfs/workingDir
-      singleBestOnly: singleBestOnly
     out: [ peptide_sequences, coding_regions, gff3_output, bed_output ]
 
 $namespaces:
