@@ -36,12 +36,13 @@ requirements:
   SchemaDefRequirement:
     types: 
       - $import: TransDecoder-v5-genetic_codes.yaml
-#hints:
-#  SoftwareRequirement:
-#    packages:
-#      transdecoder:
-#        specs: [ "" ]
-#        version: [ "5.0.0", "5.0.1", "5.0.2" ]
+hints:
+  DockerRequirement:
+    dockerPull: mr-c/transdecoder
+  SoftwareRequirement:
+    packages:
+      transdecoder:
+        version: [ "5.0.0", "5.0.1", "5.0.2" ]
 
 inputs:
   longOpenReadingFrames: Directory

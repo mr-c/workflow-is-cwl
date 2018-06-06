@@ -1,7 +1,7 @@
 cwlVersion: v1.0
 class: CommandLineTool
 
-label: "TransDecoder.LongOrfs: Perl script, which extracts the long open reading frames"
+label: "TransDecoder.LongOrfs: Extracts the long open reading frames"
 
 doc: |
       TransDecoder identifies candidate coding regions within transcript sequences, 
@@ -31,12 +31,13 @@ requirements:
   SchemaDefRequirement:
     types: 
       - $import: TransDecoder-v5-genetic_codes.yaml
-#hints:
-#  SoftwareRequirement:
-#    packages:
-#      transdecoder:
-#        specs: [ "" ]
-#        version: [ "5.0.0", "5.0.1", "5.0.2" ]
+hints:
+  DockerRequirement:
+    dockerPull: mr-c/transdecoder
+  SoftwareRequirement:
+    packages:
+      transdecoder:
+        version: [ "5.0.0", "5.0.1", "5.0.2" ]
 
 inputs:
   transcriptsFile:
