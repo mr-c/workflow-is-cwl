@@ -77,13 +77,6 @@ inputs:
     inputBinding:
       prefix: --cut_ga
 
-  cpu:
-    label: Number of parallel CPU workers to use for multithreads
-    type: int?
-    default: $(runtime.cores)
-    inputBinding:
-      prefix: --cpu
-
 baseCommand: cmsearch
 
 arguments:
@@ -91,6 +84,8 @@ arguments:
     prefix: --tblout
   - valueFrom: $(inputs.query_sequences.basename).cmsearch.out
     prefix: -o
+  - valueFrom: $(runtime.cores)
+    prefix: --cpu
 
 outputs:
   matches:

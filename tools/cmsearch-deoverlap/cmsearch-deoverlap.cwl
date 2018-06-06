@@ -8,6 +8,8 @@ hints:
       cmsearch_tblout_deoverlap:
         specs: [ "https://github.com/nawrockie/cmsearch_tblout_deoverlap" ]
         version: [ "0.02" ]
+  DockerRequirement:
+    dockerPull: biocrusoe/cmsearch-deoverlap
 
 requirements:
   InitialWorkDirRequirement:
