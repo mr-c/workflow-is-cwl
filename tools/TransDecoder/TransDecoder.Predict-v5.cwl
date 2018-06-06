@@ -38,7 +38,7 @@ requirements:
       - $import: TransDecoder-v5-genetic_codes.yaml
 hints:
   DockerRequirement:
-    dockerPull: mr-c/transdecoder
+    dockerPull: biocrusoe/transdecoder
   SoftwareRequirement:
     packages:
       transdecoder:
